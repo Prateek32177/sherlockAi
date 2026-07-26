@@ -1,7 +1,6 @@
 import app from "./app.js";
-import dotenv from "dotenv";
+import { env } from "./config/env.js";
 
-dotenv.config();
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = Number(env.PORT) || 3000;
 
 app.listen(PORT,()=>console.log(`🚀 Sherlock API running on http://localhost:${PORT}`))
